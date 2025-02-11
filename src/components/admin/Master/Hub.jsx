@@ -35,17 +35,7 @@ function Hub() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ id: id }),
-    })
-
-// fetch(`${apiUrl}brand_data`, {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-//   body: JSON.stringify({ id: id }),
-//   mode: "no-cors", // Correct placement inside the options object
-// })
-.then(response => console.log(response))
+    }).then(response => console.log(response))
 .catch(error => console.error(error));
 
       
