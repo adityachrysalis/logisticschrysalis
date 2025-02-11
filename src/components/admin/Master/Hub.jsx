@@ -29,22 +29,22 @@ function Hub() {
   const apiUrl = import.meta.env.VITE_API_URL;
 
   const fetchBrandInfo = () => {
-    // fetch(`${apiUrl}brand_data`, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ id: id }),
-    // })
+    fetch(`${apiUrl}brand_data`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: id }),
+    })
 
-fetch(`${apiUrl}brand_data`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ id: id }),
-  mode: "no-cors", // Correct placement inside the options object
-})
+// fetch(`${apiUrl}brand_data`, {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify({ id: id }),
+//   mode: "no-cors", // Correct placement inside the options object
+// })
 .then(response => console.log(response))
 .catch(error => console.error(error));
 
