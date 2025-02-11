@@ -35,10 +35,7 @@ function Hub() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ id: id }),
-    }).then(response => console.log(response))
-.catch(error => console.error(error));
-
-      
+    })
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
